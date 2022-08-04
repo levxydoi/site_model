@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            line-height: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .header,
+        .contactUs {
+            background-color: rgb(45, 45, 45);
+            color: white;
+            padding: 20px 0;
+        }
+
+        .headerTop {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .services,
+        .aboutUs {
+            padding: 20px 0;
+        }
+
+        .portfolio,
+        .team {
+            background-color: rgb(233, 233, 233);
+            padding: 20px 0;
+        }
+
+        .mainNav {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            padding: 0;
+        }
+
+        .mainNav li {
+            text-transform: uppercase;
+            margin-right: 15px;
+        }
+
+        .mainNav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .btn {
+            text-decoration: none;
+            text-transform: uppercase;
+            background-color: rgb(229, 217, 2);
+            padding: 5px 10px;
+            width: 100px;
+        }
+
+        .promo {
+            text-align: center;
+            padding: 70px;
+        }
+
+        .promo h1 {
+            font-weight: bold;
+            font-size: 45px;
+            line-height: 55px;
+
+        }
+
+        .promo a {
+            text-decoration: none;
+            color: white;
+            text-align: center;
+        }
+
+        .services ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            padding: 0;
+        }
+
+        .serviceItem {
+            display: grid;
+            justify-items: center;
+        }
+
+        .footerSocial a {
+            color: inherit;
+        }
+
+        .footerSocial {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin: 20px 0;
+        }
+
+        .picture,
+        .photo,
+        .logo {
+            background-color: rgb(179, 179, 179);
+        }
+
+        .aboutUs .picture {
+            width: 100px;
+            height: 100px;
+        }
+
+        .portfolio .picture {
+            width: 300px;
+            height: 300px;
+        }
+
+        .team .photo {
+            width: 200px;
+            height: 200px;
+        }
+
+        .services .picture {
+            width: 70px;
+            height: 70px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        .portfolioItems {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 15px;
+            justify-items: center;
+        }
+
+        .portfolioItem {
+            background-color: white;
+        }
+
+        .aboutUsItems {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        .aboutUsItem {
+            display: grid;
+            grid-template-columns: 1fr 0.5fr 1fr;
+            justify-items: center;
+            align-items: center;
+            margin: 0 20px;
+        }
+
+        .aboutUsItem:nth-child(even) {
+            grid-template-areas: ". picture description";
+            text-align: left;
+        }
+
+        .aboutUsItem:nth-child(odd) {
+            grid-template-areas: "description picture .";
+            text-align: right;
+        }
+
+        .aboutUsItem .picture {
+            grid-area: picture;
+        }
+
+        .aboutUsItem .description {
+            grid-area: description;
+        }
+
+        .employees {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .employee {
+            display: grid;
+            justify-items: center;
+        }
+
+        .employees .picture {
+            width: 100px;
+            height: 30px;
+        }
+
+        .contactUs .feedbackForm {
+            margin: 50px 100px;
+        }
+
+        .contactUs .feedbackFormContent {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .contactUs .feedbackFormGroup {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .sponsors div {
+            display: inline-block;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="headerTop">
+            <div class="headerLogo">
+                <div class="logo">
+                    <img src="" alt="Logo">
+                </div>
+            </div>
+            <ul class="mainNav">
+                <li><a href="#">Lorem</a> </li>
+                <li><a href="#">Lorem</a> </li>
+                <li><a href="#">Lorem</a> </li>
+                <li><a href="#">Lorem</a> </li>
+                <li><a href="#">Lorem</a> </li>
+            </ul>
+        </div>
+        <div class="promo">
+            <a href="#">
+                <p>Lorem ipsum dolor sit.</p>
+                <h1>
+                    Lorem ipsum dolor sit amet consectetur.
+                </h1>
+            </a>
+            <a class="btn" href="#">Lorem</a>
+        </div>
+    </div>
+    <div class="services">
+        <div class="container">
+            <h2>Services</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <ul>
+                <li class="serviceItem">
+                    <div class="picture">
+                        <img src="" alt="picture">
+                    </div>
+                    <h3>lorem</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Perferendis, suscipit.
+                    </p>
+                </li>
+                <li class="serviceItem">
+                    <div class="picture">
+                        <img src="" alt="picture">
+                    </div>
+                    <h3>lorem</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Perferendis, suscipit.
+                    </p>
+                </li>
+                <li class="serviceItem">
+                    <div class="picture">
+                        <img src="" alt="picture">
+                    </div>
+                    <h3>lorem</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Perferendis, suscipit.
+                    </p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <div class="portfolioItems ">
+                <div class="portfolioItem">
+                    <div class="picture">
+                        <img src="" alt="picture">
+                    </div>
+                    <h3>Lorem, ipsum dolor.</h3>
+                </div>
+                <div class="portfolioItem">
+                    <div class="picture">
+                        <img src="" alt="picture">
+                    </div>
+                    <h3>Lorem, ipsum dolor.</h3>
+                </div>
+                <div class="portfolioItem">
+                    <div class="picture">
+                        <img src="" alt="picture">
+                    </div>
+                    <h3>Lorem, ipsum dolor.</h3>
+                </div>
+                <div class="portfolioItem">
+                    <div class="picture">
+                        <img src="" alt="picture">
+                    </div>
+                    <h3>Lorem, ipsum dolor.</h3>
+                </div>
+                <div class="portfolioItem">
+                    <div class="picture">
+                        <img src="" alt="picture">
+                    </div>
+                    <h3>Lorem, ipsum dolor.</h3>
+                </div>
+                <div class="portfolioItem">
+                    <div class="picture">
+                        <img src="" alt="picture">
+                    </div>
+                    <h3>Lorem, ipsum dolor.</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="aboutUs">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <div class="aboutUsItems ">
+                <div class="aboutUsItem">
+                    <div class="description">
+                        <h3>Lorem, ipsum dolor.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quod totam, deserunt
+                            nihil
+                            voluptatibus culpa nemo similique odio fugiat aut at, quisquam, non voluptates expedita?
+                            Quia
+                            error
+                            molestias laudantium enim.</p>
+                    </div>
+                    <div class="picture">
+                        <img src="" alt="picture">
+                    </div>
+                </div>
+                <div class="aboutUsItem">
+                    <div class="picture">
+                        <img src="" alt="picture">
+                    </div>
+                    <div class="description">
+                        <h3>Lorem, ipsum dolor.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quod totam, deserunt
+                            nihil
+                            voluptatibus culpa nemo similique odio fugiat aut at, quisquam, non voluptates expedita?
+                            Quia
+                            error
+                            molestias laudantium enim.</p>
+                    </div>
+
+                </div>
+                <div class="aboutUsItem">
+                    <div class="description">
+                        <h3>Lorem, ipsum dolor.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quod totam, deserunt
+                            nihil
+                            voluptatibus culpa nemo similique odio fugiat aut at, quisquam, non voluptates expedita?
+                            Quia
+                            error
+                            molestias laudantium enim.</p>
+                    </div>
+                    <div class="picture">
+                        <img src="" alt="picture">
+                    </div>
+                </div>
+                <div class="aboutUsItem">
+                    <div class="picture">
+                        <img src="" alt="picture">
+                    </div>
+                    <div class="description">
+                        <h3>Lorem, ipsum dolor.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisi cing elit. Reiciendis quod totam, deserunt
+                            nihil voluptatibus culpa nemo similique odio fugiat aut at, quisquam, non voluptates
+                            expedita?
+                            Quia error molestias laudantium enim.</p>
+                    </div>
+
+                </div>
+                <div class="aboutUsItem">
+                    <div class="picture">
+                        <img src="" alt="picture">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="team">
+        <div class="container">
+            <h2>Team</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <div class="employees ">
+                <div class="employee">
+                    <div class="photo">
+                        <img src="" alt="photo">
+                    </div>
+                    <h3>Bob Dylan</h3>
+                    <div class="picture"></div>
+                </div>
+                <div class="employee">
+                    <div class="photo">
+                        <img src="" alt="photo">
+                    </div>
+                    <h3>Bob Dylan</h3>
+                    <div class="picture"></div>
+                </div>
+                <div class="employee">
+                    <div class="photo">
+                        <img src="" alt="photo">
+                    </div>
+                    <h3>Bob Dylan</h3>
+                    <div class="picture"></div>
+                </div>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt, distinctio!</p>
+            <div class="sponsors">
+                <div>Lorem, ipsum.</div>
+                <div>Lorem, ipsum.</div>
+                <div>Lorem, ipsum.</div>
+                <div>Lorem, ipsum.</div>
+            </div>
+        </div>
+    </div>
+    <div class="contactUs">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <form class="feedbackForm" action="mail" method="post">
+                <div class="feedbackFormContent">
+                    <div class="feedbackFormGroup">
+                        <input type="text" class="name" id="name">
+                        <input type="number" class="phone" id="phone">
+                        <input type="email" class="email" id="email">
+                    </div>
+                    <div class="feedbackFormGroup">
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+
+                <input class="btn" type="submit" value="Send">
+            </form>
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="footerSocial">
+                <b>Lorem, ipsum dolor.</b>
+                <div>
+                    <a class="socialBtn" href="#">L</a>
+                    <a class="socialBtn" href="#">F</a>
+                    <a class="socialBtn" href="#">I</a>
+                    <a class="socialBtn" href="#">Y</a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+
+</html>
